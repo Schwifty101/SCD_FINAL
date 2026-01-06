@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: noorulain96/docker-mern-nginx-bezkoder-ui-1:latest
+        image: noorulain26/docker-mern-nginx-bezkoder-ui-1:latest
         ports:
         - containerPort: 8888
 ---

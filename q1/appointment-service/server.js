@@ -6,7 +6,7 @@ app.use(express.json());
 
 let appointments = [];
 
-app.post("/appointments", async (req, res) => {
+app.post("/", async (req, res) => {
   const { userId, doctorId, date } = req.body;
 
   appointments.push({ userId, doctorId, date });
@@ -19,11 +19,11 @@ app.post("/appointments", async (req, res) => {
   res.json({ message: "Appointment confirmed" });
 });
 
-app.get("/appointments", (req, res) => {
+app.get("/", (req, res) => {
   res.json(appointments);
 });
 
-app.delete("/appointments/:id", (req, res) => {
+app.delete("/:id", (req, res) => {
   appointments.splice(req.params.id, 1);
   res.json({ message: "Appointment cancelled" });
 });

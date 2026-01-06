@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   api-gateway:
+    image: schwifty404/api-gateway:latest
     build:
       context: ./api-gateway
       dockerfile: Dockerfile
@@ -24,6 +25,7 @@ services:
       start_period: 40s
 
   auth-service:
+    image: schwifty404/auth-service:latest
     build:
       context: ./auth-service
       dockerfile: Dockerfile
@@ -41,6 +43,7 @@ services:
       start_period: 40s
 
   patient-service:
+    image: schwifty404/patient-service:latest
     build:
       context: ./patient-service
       dockerfile: Dockerfile
@@ -58,6 +61,7 @@ services:
       start_period: 40s
 
   doctor-service:
+    image: schwifty404/doctor-service:latest
     build:
       context: ./doctor-service
       dockerfile: Dockerfile
@@ -75,6 +79,7 @@ services:
       start_period: 40s
 
   appointment-service:
+    image: schwifty404/appointment-service:latest
     build:
       context: ./appointment-service
       dockerfile: Dockerfile
@@ -94,6 +99,7 @@ services:
       start_period: 40s
 
   notification-service:
+    image: schwifty404/notification-service:latest
     build:
       context: ./notification-service
       dockerfile: Dockerfile

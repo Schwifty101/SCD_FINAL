@@ -8,9 +8,9 @@ let users = [
   { id: 2, name: "Sara", age: 30 }
 ];
 
-app.get("/users", (req, res) => res.json(users));
+app.get("/", (req, res) => res.json(users));
 
-app.post("/users", (req, res) => {
+app.post("/", (req, res) => {
   users.push(req.body);
   res.json({ message: "User added" });
 });

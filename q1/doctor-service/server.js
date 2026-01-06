@@ -8,9 +8,9 @@ let doctors = [
   { id: 2, name: "Dr. Khan", specialization: "Dermatology", available: false }
 ];
 
-app.get("/doctors", (req, res) => res.json(doctors));
+app.get("/", (req, res) => res.json(doctors));
 
-app.put("/doctors/:id/availability", (req, res) => {
+app.put("/:id/availability", (req, res) => {
   const doc = doctors.find(d => d.id == req.params.id);
   doc.available = req.body.available;
   res.json({ message: "Availability updated" });

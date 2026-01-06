@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: noorulain96/docker-mern-nginx-bezkoder-api-1:latest
+        image: noorulain26/docker-mern-nginx-bezkoder-api-1:latest
         ports:
         - containerPort: 6868
 ---
