@@ -46,8 +46,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./api-gateway
-          file: ./api-gateway/Dockerfile
+          context: ./q1/api-gateway
+          file: ./q1/api-gateway/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -87,8 +87,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./auth-service
-          file: ./auth-service/Dockerfile
+          context: ./q1/auth-service
+          file: ./q1/auth-service/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -128,8 +128,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./patient-service
-          file: ./patient-service/Dockerfile
+          context: ./q1/patient-service
+          file: ./q1/patient-service/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -169,8 +169,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./doctor-service
-          file: ./doctor-service/Dockerfile
+          context: ./q1/doctor-service
+          file: ./q1/doctor-service/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -210,8 +210,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./appointment-service
-          file: ./appointment-service/Dockerfile
+          context: ./q1/appointment-service
+          file: ./q1/appointment-service/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -251,8 +251,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./notification-service
-          file: ./notification-service/Dockerfile
+          context: ./q1/notification-service
+          file: ./q1/notification-service/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
