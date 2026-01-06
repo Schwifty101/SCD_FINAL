@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  namespace: 22i2460-mern-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: noorulain96/docker-mern-nginx-bezkoder-ui-1:latest
+        ports:
+        - containerPort: 8888
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+  namespace: 22i2460-mern-app
+spec:
+  type: NodePort
+  selector:
+    app: frontend
+  ports:
+  - port: 8888
+    targetPort: 8888
+    nodePort: 30173
